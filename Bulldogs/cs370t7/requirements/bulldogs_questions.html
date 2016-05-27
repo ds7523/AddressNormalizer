@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Client Interview</title>
+      <style type="text/css">
+         html {
+            font-size: 100%;
+         }
+
+         body {
+            font-family: "Goudy Bookletter 1911", Georgia, serif;
+         }
+
+         #header h1 {
+            font-size: 200%;
+            margin-left: 40px;
+            line-height: 60px;
+         }
+
+         #header ul {
+            padding-left: 45px;
+            font-family: Georgia, Times, serif;
+         }
+
+         #header li {
+            font-size: 75%;
+         }
+
+         #header p {
+            font-size: 100%;
+         }
+
+         #header p, 
+         #header li {
+            display: inline;
+            font-style: italic;
+            text-align: center;
+         }
+
+         #web-info {
+            margin-left: 45px;
+            margin-right: 20px;
+            font-size: 75%;
+            font-style: italic;
+         }
+
+         #content {
+            padding-left: 45px;
+            padding-bottom: 45px;
+            border-radius: 0px 0px 10px 10px;
+         }
+
+         #content h2,
+         #web-info {
+            font-size: 120%;
+         }
+
+         #purpose pre,
+         #web-info pre {
+            font-size: 13px;
+            margin-left: -85px;
+            margin-bottom: -20px;
+            font-family: Consolas, monaco, monospace; 
+         }
+
+         .section {
+            list-style-type: none;
+         }
+
+         .section li {
+            padding-bottom: 5px;
+            text-indent: -1em;
+         }
+
+         .subsection {
+            list-style-type: none;
+            margin-left: -22px;
+         }
+
+         .subsection li {
+            padding-top: 2px;
+            padding-bottom: 2px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div id="header">
+         <h1>Client Interview: Bulldogs (Group 7)</h1>
+         <ul>
+            <li>Team members:</li>
+            <li>Brent Henderson,</li>
+            <li>Dipesh Shrestha,</li>
+            <li>Jason Kremer,</li>
+            <li>Josh Dye,</li>
+            <li>Yong Zheng</li>
+         </ul>
+      </div>
+      <div id="web-info">
+         <pre>
+            Creation date: 7:00pm 02/04/2016
+            Last modified: 9:01pm 02/22/2016
+            Creator      : Yong Zheng
+         </pre>
+      </div>
+      <div id="content">
+         <div id="purpose">
+            <h2>0. Purpose:</h2>
+            <pre>
+               The purpose for this document is to include exactly the questions such that, if each were 
+               answered by a client representative who is knowledgeable about the desired application, 
+               we would know everything necessary to write a requirements document for the software 
+               development project and to understand the project. 
+
+               Interview(when) : February 10th, 2016
+               Interview(where): VH 1328
+               Interview(who)  : Professor Jon Beck
+               Interview(What) : Asking questions about a computer system that can normalize mailing addresses
+            </pre>
+         </div>
+         <div>
+            <h2>1. Identify actors:</h2>
+            <ul class="section">
+               <li>
+                  1. Who are the end users?
+                  <ul class="subsection">
+                     <li>
+                        a. Will the end user be a person?
+                     </li>
+                     <li>
+                        b. Will the end user be a computer system?
+                     </li>
+                     <li>
+                        c. Will the end user be a certain department within a company?
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  2. Will this system be a standalone system or act as a plugin or widget that can interact with other systems?
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>2. Identify scenarios:</h2>
+            <ul class="section">
+               <li>
+                  1. How will this program be initiated by a user?
+               </li>
+               <li>
+                  2. If an authorized user fails to enter the correct credential, how many incorrect attempts should be allowed?
+               </li>
+               <li>
+                  3. Should the system standardize an invalid address (e.g. address that doesn’t exist) or try to correct that 
+                  invalid address into a valid address?
+               </li>
+               <li>
+                  4. Should the system fix a mailing address that doesn’t follow the standard rules (e.g. put the zip-code in the 
+                  front)? 
+               </li>
+               <li>
+                  5. Should the system try to complete a mailing address when there is no enough information (e.g. an address that 
+                  doesn’t have city, state, and zip-code)?
+               </li>
+               <li>
+                  6. What will happen if the system unexpectedly terminates in the middle of a normalization process?
+               </li>
+               <li>
+                  7. How will this program be terminated by a user?
+                  <ul class="subsection">
+                     <li>
+                        a. Would user logging out terminate the system process?
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>3. Identify use cases:</h2>
+            <ul class="section">
+               <li>
+                  1. Should the system require users to login in order to use the system?
+               </li>
+               <li>
+                  2. Should the system fix the data if the input mailing address is invalid?
+               </li>
+               <li>
+                  3. Should the system autocomplete the data if the input mailing address is incomplete?
+               </li>
+               <li>
+                  4. Should the system format the mailing addresses after the standardization process?
+               </li>
+               <li>
+                  5. Should the system notify users once the standardization process is completed?
+               </li>
+               <li>
+                  6. Should the system allow users to pause the standardization process?
+               </li>
+               <li>
+                  7. Should the system have a restore state that it can revert to after an unexpected shutdown?
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>4. Identify non-functional requirements:</h2>
+            <ul class="section">
+               <li>
+                  1. What are the acceptable system environments?
+                  <ul class="subsection">
+                     <li>
+                        a. Should this system be a web, desktop, or mobile application?
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  2. What are the performance requirements for this system? How fast must the system standardize a 
+                  given set of mailing addresses?
+               </li>
+               <li>
+                  3. Should the system be able to interact with maps?
+               </li>
+               <li>
+                  4. What types of security features are required for the data transmission process?
+                  <ul class="subsection">
+                     <li>
+                        a. Should the system encrypt the data before it is transmitted?
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  5. Should the system be able to perform tasks both online and offline?
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>5. Identify functional requirements:</h2>
+            <ul class="section">
+               <li>
+                  1. Should the system sort the standardized mailing addresses?
+               </li>
+               <li>
+                  2. Should the system accept variety of input types (e.g. a database, a text file, input files, etc.)?
+               </li>
+               <li>
+                  3. Should the system format the output result in a particular way (e.g. label)?
+               </li>
+               <li>
+                  4. Should the system be able to send a notification email to users after the completion of standardization process? 
+               </li>
+               <li>
+                  5. Should the system store the invalid data set?
+               </li>
+            </ul>
+         </div>
+      </div>
+   </body>
+</html>

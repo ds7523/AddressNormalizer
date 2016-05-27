@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Requirements</title>
+      <style type="text/css">
+         html {
+            font-size: 100%;
+         }
+
+         body {
+            font-family: "Goudy Bookletter 1911", Georgia, serif;
+         }
+
+         #header h1 {
+            font-size: 200%;
+            margin-left: 40px;
+            line-height: 60px;
+         }
+
+         #header ul {
+            padding-left: 45px;
+            font-family: Georgia, Times, serif;
+         }
+
+         #header li {
+            font-size: 75%;
+         }
+
+         #header p {
+            font-size: 100%;
+         }
+
+         #header p, 
+         #header li {
+            display: inline;
+            font-style: italic;
+            text-align: center;
+         }
+
+         #web-info {
+            margin-left: 45px;
+            margin-right: 20px;
+            font-size: 75%;
+            font-style: italic;
+         }
+
+         #content {
+            padding-left: 45px;
+            padding-bottom: 45px;
+            border-radius: 0px 0px 10px 10px;
+         }
+
+         #content h2 {
+            font-size: 120%;
+         }
+
+         #purpose pre,
+         #web-info pre {
+            font-size: 13px;
+            margin-left: -85px;
+            margin-bottom: -20px;
+            font-family: Consolas, monaco, monospace; 
+         }
+
+         .section {
+            list-style-type: none;
+         }
+
+         .section li {
+            padding-bottom: 5px;
+            text-indent: -1em;
+         }
+
+         .subsection {
+            list-style-type: none;
+            margin-left: -22px;
+         }
+
+         .subsection li {
+            padding-top: 2px;
+            padding-bottom: 2px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div id="header">
+         <h1>Normalized Mailing Address Application Requirements: Bulldogs (Group 7)</h1>
+         <ul>
+            <li>Team members:</li>
+            <li>Brent Henderson,</li>
+            <li>Dipesh Shrestha,</li>
+            <li>Jason Kremer,</li>
+            <li>Josh Dye,</li>
+            <li>Yong Zheng</li>
+         </ul>
+      </div>
+      <div id="web-info">
+         <pre>
+            Creation date: 2:00pm 02/13/2016
+            Last modified: 9:01pm 02/22/2016
+            Creator      : Yong Zheng
+         </pre>
+      </div>
+      <div id="content">
+         <div id="purpose">
+            <h2>0. Preface:</h2>
+            <pre>
+               1. Purpose  : The purpose of this document is to describe the functional and non-functional features that 
+                             will be present in the system, as well as a list of definitions that are important for 
+                             understanding the system. The Bulldogs will develop a system that normalizes mailing addresses 
+                             as needed by professor Jon Beck.
+               2. Audience : Bulldogs developers team and professor Jon Beck
+               3. Version  : 22 February 2016
+               4. Author   : Bulldogs team
+               5. Contact  :
+                  1. Brent Henderson &lt;bmh6542@truman.edu&gt;
+                  2. Dipesh Shrestha &lt;ds7523@truman.edu&gt;
+            </pre>
+         </div>
+         <div>
+            <h2>1. Introduction:</h2>
+            <ul class="section">
+               <li>
+                  1. The system can take in addresses, either individually through text boxes or in a bulk list, and normalize them. A successful system operation will result in a list of normalized addresses and a list of invalid addresses that were unable to be normalized.
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>2. Glossary:</h2>
+            <ul class="section">
+               <li>
+                  1. Valid address: address does not have all possible information but can still be normalized.
+               </li>
+               <li>
+                  2. Invalid address: Address does not have enough information to determine what the complete address should be.
+               </li>
+               <li>
+                  3. Normalized Address: Address fits the format requirements as defined by the United States Postal Service.
+               </li>
+               <li>
+                  4. Locally: Within the system where user began the process. 
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>3. Functional Requirements:</h2>
+            <ul class="section">
+               <li>
+                  1. The system shall be able to normalize mailing addresses given the mailing addresses are valid (questions 3.2, 3.3)
+               </li>
+               <li>
+                  2. The system shall not be able to normalize mailing addresses given the mailing addresses are invalid (questions 3.2, 3.3)
+               </li>
+               <li>
+                  3. The user shall be able to normalize a single entry (question 5.2)
+               </li>
+               <li>
+                  4. The user shall be able to normalize a file (e.g. .txt and .csv) with bulk entries (question 5.2)
+               </li>
+               <li>
+                  5. The system shall be able to distinguish between valid and invalid entries and output them into separate files (question 5.3) 
+               </li>
+            </ul>
+         </div>
+         <div>
+            <h2>4. Non-Functional Requirements:</h2>
+            <ul class="section">
+               <li>
+                  1. The system must be a desktop application (question 4.1.a)
+               </li>
+               <li>
+                  2. The system must perform all operations on the data locally (question 4.4)
+               </li>
+               <li>
+                  3. The system must be able to perform all operations offline (question 4.5)
+               </li>
+               <li>
+                  4. In the case of an unexpected program termination, any in-progress normalization from before the termination shall not be retrievable (question 3.7)
+               </li>
+               <li>
+                  5. The system must have a graphical user interface (question 4.1.a)
+               </li>
+            </ul>
+         </div>
+      </div>
+   </body>
+</html>
